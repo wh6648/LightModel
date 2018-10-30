@@ -1,0 +1,383 @@
+authority:
+  - url: "GET /authority/list"
+    action: "getList"
+  - url: "GET /authority/get"
+    action: "get"
+  - url: "PUT /authority/update"
+    action: "update"
+  - url: "POST /authority/add"
+    action: "add"
+  - url: "PUT /authority/remove"
+    action: "remove"
+  - url: "GET /authority/search"
+    action: "search"
+
+setting:
+  - url: "GET /setting/list"
+    action: "getList"
+  - url: "GET /setting/get"
+    action: "get"
+  - url: "PUT /setting/set"
+    action: "set"
+  - url: "PUT /setting/update"
+    action: "update"
+  - url: "POST /setting/add"
+    action: "add"
+  - url: "PUT /setting/remove"
+    action: "remove"
+
+role:
+  - url: "GET /role/list"
+    action: "getList"
+  - url: "GET /role/get"
+    action: "get"
+  - url: "PUT /role/update"
+    action: "update"
+  - url: "POST /role/add"
+    action: "add"
+  - url: "PUT /role/remove"
+    action: "remove"
+  - url: "GET /role/search"
+    action: "search"
+
+aclink:
+  - url: "GET /aclink/list"
+    action: "getList"
+  - url: "GET /aclink/get"
+    action: "get"
+  - url: "PUT /aclink/update"
+    action: "update"
+  - url: "POST /aclink/add"
+    action: "add"
+  - url: "PUT /aclink/remove"
+    action: "remove"
+
+ops/machine:
+  - url: "GET /machine/list"
+    action: "getList"
+  - url: "GET /machine/get"
+    action: "get"
+  - url: "PUT /machine/update"
+    action: "update"
+  - url: "POST /machine/add"
+    action: "add"
+  - url: "PUT /machine/remove"
+    action: "remove"
+
+ops/middleware:
+  - url: "GET /middleware/list"
+    action: "getList"
+  - url: "GET /middleware/get"
+    action: "get"
+  - url: "PUT /middleware/update"
+    action: "update"
+  - url: "POST /middleware/add"
+    action: "add"
+  - url: "PUT /middleware/remove"
+    action: "remove"
+
+function:
+  - url: "GET /function/list"
+    action: "getList"
+  - url: "GET /function/get"
+    action: "get"
+  - url: "PUT /function/update"
+    action: "update"
+  - url: "PUT /function/remove"
+    action: "remove"
+  - url: "POST /function/add"
+    action: "add"
+
+app:
+  - url: "GET /app/list"
+    action: "getList"
+  - url: "GET /app/get"
+    action: "get"
+  - url: "POST /app/add"
+    action: "add"
+  - url: "PUT /app/update"
+    action: "update"
+  - url: "PUT /app/remove"
+    action: "remove"
+
+tag:
+  - url: "GET /tag/list"
+    action: "getList"
+  - url: "POST /tag/add"
+    action: "add"
+  - url: "PUT /tag/remove"
+    action: "remove"
+  - url: "GET /tag/search"
+    action: "search"
+
+group:
+  - url: "GET /group/get"
+    action: "get"
+  - url: "GET /group/list"
+    action: "getList"
+  - url: "POST /group/add"
+    action: "add"
+  - url: "PUT /group/update"
+    action: "update"
+  - url: "PUT /group/remove"
+    action: "remove"
+  - url: "GET /group/search"
+    action: "search"
+
+user:
+  - url: "GET /user/get"
+    action: "get"
+  - url: "GET /user/list"
+    action: "getList"
+  - url: "POST /user/add"
+    action: "add"
+  - url: "PUT /user/update"
+    action: "update"
+  - url: "PUT /user/remove"
+    action: "remove"
+  - url: "GET /user/search"
+    action: "search"
+
+file:
+  ## META信息的操作
+  - url: "GET /file/list"         # 获取文件一览
+    action: "getList"
+  - url: "GET /file/get"          # 获取文件META信息，不包括文件本身
+    action: "get"
+  - url: "POST /file/add"         # 生成文件META信息
+    action: "add"
+  - url: "PUT /file/update"       # 更新文件META信息，不包括文件本身
+    action: "update"
+  - url: "PUT /file/remove"       # 删除文件META信息，不包括文件本身
+    action: "remove"
+  - url: "GET /file/search"       # 简易检索
+    action: "search"
+
+  ## 通过META信息操作文件实体
+  - url: "POST /file/create"      # 上传文件，并生成文件META信息
+    action: "create"
+  - url: "POST /file/upload"      # 仅上传文件，不生成META信息
+    action: "upload"
+  - url: "GET /file/download/:id" # 下载文件，通过META信息的ID
+    custom: "download"
+  - url: "GET /file/image/:id" # 下载文件，通过META信息的ID
+    custom: "image"
+  ## 压缩
+  - url: "GET /file/zip"          # 将指定条件的文件打包下载
+    custom: "zip"
+
+  ## QRCode生成
+  - url: "POST /file/qrcode"      # 获取QRCode
+    custom: "qrcode"
+
+category:
+  - url: "GET /category/get"
+    action: "get"
+  - url: "GET /category/list"
+    action: "getList"
+  - url: "POST /category/add"
+    action: "add"
+  - url: "PUT /category/update"
+    action: "update"
+  - url: "PUT /category/remove"
+    action: "remove"
+  - url: "GET /category/search"
+    action: "search"
+
+ops/backup:
+  - url: "GET /backup/list"
+    action: "getList"
+  - url: "GET /backup/get"
+    action: "get"
+  - url: "POST /backup/add"
+    action: "add"
+  - url: "PUT /backup/remove"
+    action: "remove"
+  - url: "PUT /backup/update"
+    action: "update"
+
+template:
+  - url: "GET /template/get"
+    action: "get"
+  - url: "GET /template/list"
+    action: "getList"
+  - url: "POST /template/add"
+    action: "add"
+  - url: "PUT /template/update"
+    action: "update"
+  - url: "PUT /template/remove"
+    action: "remove"
+
+place:
+  - url: "GET /place/list"
+    action: "getList"
+  - url: "GET /place/get"
+    action: "get"
+  - url: "POST /place/add"
+    action: "add"
+  - url: "PUT /place/update"
+    action: "update"
+  - url: "PUT /place/remove"
+    action: "remove"
+
+#######################################################
+## 一下未整理
+
+
+device:
+  - url: "GET /device/list"
+    action: "getList"
+  - url: "GET /device/get"
+    action: "get"
+  - url: "POST /device/add"
+    action: "add"
+  - url: "PUT /device/update"
+    action: "update"
+  - url: "PUT /device/register"
+    action: "register"
+  - url: "PUT /device/remove"
+    action: "remove"
+  - url: "GET /device/search"
+    action: "search"
+system:
+  - url: "GET /system/healthcheck"    # 检查系统心跳
+    action: "healthcheck"
+  - url: "GET /system/versioncheck"   # 检查应用版本
+    action: "versioncheck"
+
+
+datarider/ctrl_structure:
+  - url: "GET /admin/structure/list.json"
+    action: "getList"
+  - url: "GET /admin/structure/distinct.json"
+    action: "distinct"
+  - url: "GET /admin/structure/get.json"
+    action: "get"
+  - url: "GET /admin/structure/getOne.json"
+    action: "getOne"
+  - url: "POST /admin/structure/add.json"
+    action: "add"
+  - url: "PUT /admin/structure/update.json"
+    action: "update"
+  - url: "PUT /admin/structure/remove.json"
+    action: "remove"
+  - url: "GET /admin/structure/getMobileFile"
+    action: "getMobileFile"
+    custom: "getMobileFile"
+
+datarider/ctrl_board:
+  - url: "GET /admin/board/list.json"
+    action: "getList"
+  - url: "GET /admin/board/get.json"
+    action: "get"
+  - url: "GET /admin/board/getOne.json"
+    action: "getOne"
+  - url: "POST /admin/board/add.json"
+    action: "add"
+  - url: "PUT /admin/board/update.json"
+    action: "update"
+  - url: "PUT /admin/board/remove.json"
+    action: "remove"
+
+i18n:
+  - url: "GET /i18n/list"
+    action: "getList"
+  - url: "GET /i18n/get"
+    action: "get"
+  - url: "GET /i18n/getOne"
+    action: "getOne"
+  - url: "POST /i18n/add"
+    action: "add"
+  - url: "PUT /i18n/update"
+    action: "update"
+  - url: "PUT /i18n/remove"
+    action: "remove"
+
+
+#etl:
+#  - url: "GET /admin/etl/list.json"
+#    action: "getList"
+#  - url: "GET /admin/etl/get.json"
+#    action: "get"
+#  - url: "POST /admin/etl/add.json"
+#    action: "add"
+#  - url: "PUT /admin/etl/update.json"
+#    action: "update"
+#  - url: "PUT /admin/etl/remove.json"
+#    action: "remove"
+#  - url: "POST /admin/etl/loadFile.json"
+#    action: "loadFile"
+#  - url: "GET /admin/etl/getAllSchema.json"
+#    action: "getAllSchema"
+
+
+#company:
+#  - url: "GET /admin/company/get.json"
+#    action: "get"
+#  - url: "GET /admin/company/list.json"
+#    action: "getList"
+#  - url: "POST /admin/company/add.json"
+#    action: "add"
+#  - url: "PUT /admin/company/update.json"
+#    action: "update"
+
+
+#data:
+#  - url: "GET /admin/data/all.json"
+#    action: "getAll"
+
+
+
+#hcheck/ctrl_hcheck:
+#  - url: "GET /HealthCheck.json"
+#    action: "check"
+
+#console:
+#  - url: "GET /console"
+#    action: "pipe"
+
+ops/cron:
+  - url: "POST /cron/add"
+    action: "add"
+  - url: "PUT /cron/remove"
+    action: "remove"
+  - url: "PUT /cron/update"
+    action: "update"
+  - url: "GET /cron/get"
+    action: "get"
+  - url: "GET /cron/list"
+    action: "getList"
+
+#salt:
+#  - url: "GET /admin/operation/salt/status.json"
+#    action: "getStatus"
+#  - url: "GET /admin/operation/salt/job.json"
+#    action: "getJob"
+#  - url: "GET /admin/operation/salt/iptables.json"
+#    action: "getIptables"
+#  - url: "GET /admin/operation/salt/timezone.json"
+#    action: "getTimezone"
+#  - url: "GET /admin/operation/salt/command.json"
+#    action: "getCommand"
+#
+#monitor:
+#  - url: "GET /admin/monitor/zbxLogin.json"
+#    action: "zbxLogin"
+#  - url: "GET /admin/monitor/zbxHistory.json"
+#    action: "zbxHistory"
+#  - url: "GET /admin/monitor/zbxHosts.json"
+#    action: "zbxHosts"
+#  - url: "GET /admin/monitor/zbxItems.json"
+#    action: "zbxItems"
+#  - url: "POST /admin/monitor/graph/update.json"
+#    action: "updateGraph"
+#  - url: "GET /admin/monitor/graph/list.json"
+#    action: "getGraphList"
+#  - url: "GET /admin/monitor/zabbix/list.json"
+#    action: "getMonitorZabbixList"
+#  - url: "GET /admin/monitor/zabbix/get.json"
+#    action: "getMonitorZabbix"
+
+ops/log:
+  - url: "GET /log/list"
+    action: "getList"
